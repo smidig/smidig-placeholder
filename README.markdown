@@ -2,17 +2,19 @@
 
 ## Getting started
 
+Having read the [README of the smidig-conference app](https://github.com/smidig/smidig-conference) might help.
+
 ### Requirements
 
 * Ruby
 * git
-* bundler (gem install bundler)
+* RubyGems: bundler, heroku
 
-### Local Environment
+### Setup Local Environment
 
 Grab your copy and install depencies:
 
-    git clone http://github.com/USERNAME/smidig-placeholder
+    git clone http://github.com:kwltrs/smidig-placeholder
     cd smidig-placeholder
     bundle install
 
@@ -28,5 +30,5 @@ Do once:
 
 To deploy:
 
-    $ git push production
+    $ git push production master
 
