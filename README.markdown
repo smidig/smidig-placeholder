@@ -12,13 +12,13 @@
 
 Grab your copy and install depencies:
 
-   git clone http://github.com/<tba>/smidig-placeholder
-   cd smidig-placeholder
-   bundle install
+    git clone http://github.com/USERNAME/smidig-placeholder
+    cd smidig-placeholder
+    bundle install
 
 Start server on http://localhost:3000
 
-   rackup -p 3000
+    rackup -p 3000
 
 ## Deployment to Heroku
 
