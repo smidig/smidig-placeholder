@@ -14,7 +14,7 @@ Having read the [README of the smidig-conference app](https://github.com/smidig/
 
 Grab your copy and install depencies:
 
-    git clone http://github.com:kwltrs/smidig-placeholder
+    git clone http://github.com:smidig/smidig-placeholder
     cd smidig-placeholder
     bundle install
 
