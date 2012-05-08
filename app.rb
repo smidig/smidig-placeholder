@@ -29,16 +29,16 @@ __END__
 
       %ul
         %li
-          %a(href="https://twitter.com/#!/smidig")
+          %a(href="https://twitter.com/smidig")
             @smidig på twitter
         %li
           %a(href="http://lanyrd.com/2012/smidig2012/")
             Smidig 2012 på Lanyrd.com
         %li
-          %a(href="http://www.facebook.com/pages/Smidigkonferansen/102562453136427")
+          %a(href="http://www.facebook.com/smidig")
             Smidig på Facebook
         %li
-          %a(href="http://www.linkedin.com/groups?mostPopular=&gid=963587")
+          %a(href="http://www.linkedin.com/groups?gid=963587")
             Smidig på LinkedIn
         %li
           %a(href="mailto:kontakt@smidig.no")
