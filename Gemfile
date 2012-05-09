@@ -8,3 +8,7 @@ gem "sass"
 group :development do
   gem "rack"
 end
+
+group :test do
+  gem "rack-test"
+end

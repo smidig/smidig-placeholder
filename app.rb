@@ -2,6 +2,14 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 
+before do
+  if request.host.start_with? "www."
+    url = request.scheme + "://"
+    url << request.host.sub(/^www\./, "")
+    redirect to(url)
+  end
+end
+
 get '/' do
   haml :index
 end
