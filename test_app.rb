@@ -19,6 +19,7 @@ class AppTest < Test::Unit::TestCase
   def test_redirect_www_subdomain
     get 'http://www.smidig2012.no/'
     assert last_response.redirect?
+    assert_equal 301, last_response.status
 
     follow_redirect!
 

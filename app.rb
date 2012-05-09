@@ -6,7 +6,7 @@ before do
   if request.host.start_with? "www."
     url = request.scheme + "://"
     url << request.host.sub(/^www\./, "")
-    redirect to(url)
+    redirect to(url), 301
   end
 end
 
