@@ -14,7 +14,7 @@ get '/' do
   haml :index
 end
 
-get '/stylesheet/' do
+get '/stylesheet' do
   sass :css
 end
 
@@ -25,30 +25,21 @@ __END__
   %head
     %meta(charset="utf-8")
     %title Smidig 2012
+    %link(rel="stylesheet" href="/stylesheet")
   %body
     =yield
 
 
 @@ css
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700)
+@mixin normal-font
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+@mixin bold-font
+  font-family: 'Open Sans', sans-serif
+  font-weight: 700
 
 body
-  background-color: #110039
+  background-color: #000
   color: #eee
-  font-family: Helvetica, Arial, sans-serif
-.page
-  width: 50%
-  margin: 0 auto
-a:link, a:visited
-  text-decoration: none
-  color: #b1e038
-a:hover
-  text-decoration: underline
-a:active
-  color: #fff
-ul
-  list-style-type: none
-  padding: 0
-  margin: 0
-li
-  padding: 0.3em 0
-  margin: 0
+  @include normal-font
