@@ -14,46 +14,22 @@ get '/' do
   haml :index
 end
 
-get '/style.css' do
-  sass :style
+get '/stylesheet/' do
+  sass :css
 end
 
 __END__
-@@ index
+@@ layout
 !!! 5
 %html(lang="no")
   %head
     %meta(charset="utf-8")
     %title Smidig 2012
-    %link(rel="stylesheet" href="/style.css")
   %body
-    .page
-      %h1
-        Smidig 2012
-
-      %p
-        5.-6. November, 2012 <br/>
-        Radisson Blue Plaza, Oslo
-
-      %ul
-        %li
-          %a(href="https://twitter.com/smidig")
-            @smidig på twitter
-        %li
-          %a(href="http://lanyrd.com/2012/smidig2012/")
-            Smidig 2012 på Lanyrd.com
-        %li
-          %a(href="http://www.facebook.com/smidig")
-            Smidig på Facebook
-        %li
-          %a(href="http://www.linkedin.com/groups?gid=963587")
-            Smidig på LinkedIn
-        %li
-          %a(href="mailto:kontakt@smidig.no")
-            kontakt@smidig.no
+    =yield
 
 
-@@ style
+@@ css
 
 body
   background-color: #110039
