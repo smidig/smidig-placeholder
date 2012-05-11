@@ -2,6 +2,21 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 
+
+configure do
+  set :html, :format => 'html5'
+  set :sass, :views => 'sass'
+end
+
+configure :production do
+  set :sass, :style => :compressed
+end
+
+configure :development do
+  set :sass, :debug_info => true
+end
+
+
 before do
   if request.host.start_with? "www."
     url = request.scheme + "://"
@@ -10,13 +25,15 @@ before do
   end
 end
 
+
 get '/' do
   haml :index
 end
 
 get '/stylesheet' do
-  sass :css
+  sass :stylesheet
 end
+
 
 __END__
 @@ layout
@@ -29,17 +46,3 @@ __END__
   %body
     =yield
 
-
-@@ css
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700)
-@mixin normal-font
-  font-family: 'Open Sans', sans-serif
-  font-weight: 400
-@mixin bold-font
-  font-family: 'Open Sans', sans-serif
-  font-weight: 700
-
-body
-  background-color: #000
-  color: #eee
-  @include normal-font
