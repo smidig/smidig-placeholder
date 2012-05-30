@@ -1,33 +1,67 @@
-.event-name
-  Smidig 2012
+%header
+  %h1.event-name
+    Smidig 2012
+  %h2.event-tagline
+    Den årlige konferansen for Smidig systemutvikling i Oslo.
 
-.event-date
-  5.-6. November, 2012
-.event-location
-  Radisson Blue Plaza, Oslo
 
-.about-event
-  Sixth iteration of Norways Agile conference series.
-  We are still working on the concept. Stay tuned!
+#content
+  .event-details
+    .event-date
+      5.-6. November, 2012
+    .event-location
+      Radisson Blue Plaza, Oslo
 
-.call-for-money
-  Smidig is organized by volunters and depends on sponsormoney.
-  Want to become sponsor?  Ask us for our sponsorpakke.
+  .about-event
+    %h3 Om Smidigkonferensen
 
-.call-for-participation
-  We're hiring.
+    Sixth iteration of Norways Agile conference series.
+    We are still working on the concept and ticket sales will start soon.
+    Follow Smidig on <a href="https://twitter.com/smidig">twitter</a> and <a href="http://www.facebook.com/smidig">facebook</a> to get updates.
 
-.follow-us
-  https://twitter.com/smidig
+  .about-us
+    %h3 Hvorfor Smidigkonferensen?
 
-.contact-us
-  kontakt@smidig.no
+    Vi tror at IT-prosjekter i Norge kan lære mye av prinsippene bak smidig
+    utvikling. Derfor arrangerer frivillige entusiaster Smidig-konferansen for
+    å dele erfaringer og bidra til å øke kunnskapen om smidige metoder i Oslo
+    og Norge.
 
-.socialize
-  http://lanyrd.com/2012/smidig2012
-  http://www.facebook.com/smidig
-  http://www.linkedin.com/groups?gid=963587
+  .call-for-participation
+    %h3 Hjelp oss
 
-.video-archive
-  http://vimeo.com/smidig
+    .call-for-money
+      Smidig is organized by volunters and depends on sponsormoney.
+      Want to become sponsor?  Ask us for our sponsorpakke.
 
+    .call-for-participation
+      Vi er frivilige entusiaster. Bli med!
+
+    .contact-us
+      Contact us <a href="mailto:kontakt@smidig.no">kontakt@smidig.no</a>
+
+
+    
+  %h3 Repriser
+  %ul
+    %li
+      %a(href="http://vimeo.com/smidig") Videoarkiv på Vimeo
+
+  %h3 Gamle sider
+  %ul
+    - 5.times do |i|
+      %li
+        %a{:href=>"http://smidig#{2011 - i}.no/"}= 2011 - i
+
+  %h3 Følj oss
+  %ul
+    %li
+      %a(href="https://twitter.com/smidig") @twitter
+    %li
+      %a(href="http://www.facebook.com/smidig") Smidigkonferanse
+    %li
+      %a(href="http://lanyrd.com/2012/smidig2012") Lanyrd
+
+%footer
+  Smidig stiftelsen gjør dette. 
+  <a href="mailto:kontakt@smidig.no">kontakt@smidig.no</a>

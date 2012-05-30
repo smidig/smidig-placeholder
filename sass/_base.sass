@@ -1,0 +1,20 @@
+body
+  background-color: #fff
+  color: #333
+  @include font-open-sans-400
+
+h1, h2, h3, h4, h5, h6
+  @include font-open-sans-700
+  font-weight: bold
+  margin: 0
+  padding: 0
+
+h1
+  color: #bd1584
+
+a
+  &:link, &:visited
+    color: #bd1584
+  &:hover, &:active
+    color: #036
+    text-decoration: none
