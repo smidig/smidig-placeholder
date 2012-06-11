@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'haml'
 require 'sass'
+require 'yaml'
 
 
 configure do
@@ -16,6 +17,19 @@ configure :development do
   set :sass, :debug_info => true
 end
 
+helpers do
+  def partial(template, *args)
+    template_array = template.to_s.split('/')
+    template = template_array[0..-2].join('/') + "/_#{template_array[-1]}"
+    options = args.last.is_a?(Hash) ? args.pop : {}
+    options.merge!(:layout => false)
+    haml(:"#{template}", options)
+  end
+
+  def sponsors
+    YAML::load( File.open("sponsors.yml") )
+  end
+end
 
 before do
   if request.host.start_with? "www."
@@ -33,16 +47,3 @@ end
 get '/stylesheet' do
   sass :stylesheet
 end
-
-
-__END__
-@@ layout
-!!! 5
-%html(lang="no")
-  %head
-    %meta(charset="utf-8")
-    %title Smidig 2012
-    %link(rel="stylesheet" href="/stylesheet")
-  %body
-    =yield
-

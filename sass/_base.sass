@@ -1,20 +1,113 @@
+@mixin page-width
+  margin: 0 auto
+  width: 90%
+  max-width: 980px
+
 body
-  background-color: #fff
+  background-color: #eee
+  background-image: -moz-linear-gradient(top, #000, #eee 50%)
+  background-repeat: no-repeat
+  font-size: 100%
   color: #333
   @include font-open-sans-400
+  margin: 0
+  padding: 0
 
 h1, h2, h3, h4, h5, h6
   @include font-open-sans-700
+  font-size: 1em
   font-weight: bold
   margin: 0
   padding: 0
 
-h1
-  color: #bd1584
-
 a
   &:link, &:visited
-    color: #bd1584
+    color: #d00
   &:hover, &:active
-    color: #036
     text-decoration: none
+
+.page-header
+  @include page-width
+  color: #fff
+  padding: 40px 0 30px
+  overflow: hidden
+
+.event-title
+  float: left
+  width: 62.8%
+.event-details
+  float: left
+  width: 100 - 62.8%
+
+.event-name
+  font-size: (30/16) * 1em
+.event-tagline
+  font-size: (18/16) * 1em
+  font-weight: normal
+
+.event-date
+  font-size: (26/16) * 1em
+.event-location
+  font-size: (18/16) * 1em
+
+
+.page-nav
+  background-color: #666
+  background-image: -moz-linear-gradient(top, #666, #333)
+  background-repeat: no-repeat
+
+.page-nav_links
+  @include page-width
+  padding: 5px 0
+.page-nav_item
+  display: inline
+  list-style-type: none
+
+.page-nav_link
+  display: inline-block
+  padding: 3px 5px
+  text-decoration: none
+  font-weight: bold
+  text-shadow: 1px 1px #333
+
+a.page-nav_link:link, a.page-nav_link:visited
+  color: #eee
+a.page-nav_link:hover, a.page-nav_link:active
+  color: #fff
+
+
+
+.page-content_wrapper
+  background-color: #eee
+  padding: 0 0 10px
+.page-content
+  @include page-width
+  min-height: 600px
+  background-color: #eee
+  border-width: 0 1px 1px 1px
+  border-style: solid
+  border-color: #aaa
+  box-shadow: 0 2px 3px #aaa
+  overflow: hidden
+
+.main-content
+  float: left
+  width: 62.8%
+.sponsors
+  float: left
+  width: 100 - 62.8%
+
+.sponsor-list, .sponsor-list_item
+  display: block
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.sponsor-list_link
+
+.page-footer
+  color: #999
+  @include page-width
+  padding: 10px
+  font-size: .9em
+

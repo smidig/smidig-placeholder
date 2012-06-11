@@ -1,0 +1,37 @@
+---
+- :name: Skatteetaten
+  :img:  skatt.png
+  :url:  http://www.skat.no/
+- :name: Statens Pensjonskasse
+  :img:  spk.png
+  :url:  http://www.spk.no/
+- :name: FINN.no
+  :img:  finn.png
+  :url:  http://www.finn.no/
+- :name: Bouvet
+  :img:  bouvet.png
+  :url:  http://www.bouvet.no/
+- :name: Miles
+  :img:  miles.png
+  :url:  http://www.miles.no/
+- :name: Bekk
+  :img:  bekk.png
+  :url:  http://www.bekk.no/
+- :name: Itera
+  :img:  itera.png
+  :url:  http://www.itera.no/
+- :name: Metier/ITTP
+  :img:  metier.png
+  :url:  http://www.smidigeprosjekter.no/
+- :name: Steria
+  :img:  steria.png
+  :url:  http://www.steria.no/
+- :name: Iterate
+  :img:  iterate.png
+  :url:  http://www.iterate.no/
+- :name: Conduct
+  :img:  conduct.png
+  :url:  http://www.conduct.no/
+- :name: Acando
+  :img:  acando.png
+  :url:  http://www.acando.no/
