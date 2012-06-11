@@ -1,0 +1,3 @@
+%script(charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js")
+%script
+  new TWTR.Widget({ version: 2, type: 'profile', rpp: 5, interval: 30000, width: 'auto', height: 300, theme: { shell: { background: '#eeeeee', color: '#333333' }, tweets: { background: '#eeeeee', color: '#333333', links: '#dd0000' } }, features: { scrollbar: true, loop: false, live: false, behavior: 'all' } }).render().setUser('smidig').start();
