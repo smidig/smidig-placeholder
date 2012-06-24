@@ -1,55 +1,66 @@
-%header.page-header
-  .event-title
-    %h1.event-name
-      Smidig 2012
-    %h2.event-tagline
-      Den årlige konferansen for Smidig systemutvikling i Oslo.
+%header.page-header.container
+  .row
+    .twelvecol.last
+      .event-title
+        %h1.event-name
+          Smidig 2012
+        %p.event-tagline
+          Den årlige konferansen for Smidig systemutvikling i Oslo.
 
-  .event-details
-    .event-date
-      5.-6. November, 2012
-    .event-location
-      Radisson Blu Plaza Hotel, Oslo
+      .extra
+        .smidig-social
+          %a(href="http://www.facebook.com/smidig")
+            %img(src="/images/social/facebook-16x16.png")
+          %a(href="https://twitter.com/smidig")
+            %img(src="/images/social/twitter-16x16.png")
+          %a(href="http://lanyrd.com/2012/smidig2012")
+            %img(src="/images/social/lanyrd-16x16.png")
+        .event-details
+          .decoration
+            .event-date
+              5.-6. November, 2012
+            .event-location
+              Radisson Blu Plaza Hotel, Oslo
 
+  .row
+    %nav.twelvecol.last
+      %ul.page-nav
+        %li.active
+          %a(href="#") Whatever
+        %li
+          %a(href="#") Whenever
+        %li
+          %a(href="#") Whatever 123
+        %li.last
+          %a(href="#") Whatever
 
-%nav.page-nav
-  %ul.page-nav_links
-    %li.page-nav_item
-      %a.page-nav_link(href="#") Whatever
-    %li.page-nav_item
-      %a.page-nav_link(href="#") Whatever
-    %li.page-nav_item
-      %a.page-nav_link(href="#") Whatever
-    %li.page-nav_item
-      %a.page-nav_link(href="#") Whatever
+.page-content_wrapper.container
+  .page-content.row.main
+    .main-content.eightcol
+      .content-wrapper
+        %h2.page_title Om Smidigkonferensen
 
-.page-content_wrapper
-  .page-content
-    %section.main-content
+        Smidigkonferansen har blitt arrangert årlig siden 2007. Vi jobber nå med årets konsept og påmelding vi åpne snart.
+        Følg oss på <a href="https://twitter.com/smidig">twitter</a> og <a href="http://www.facebook.com/smidig">facebook</a> for oppdateringer.
 
-      %h3 Om Smidigkonferensen
+        = partial :twitter_widget
 
-      Smidigkonferansen har blitt arrangert årlig siden 2007. Vi jobber nå med årets konsept og påmelding vi åpne snart.
-      Følg oss på <a href="https://twitter.com/smidig">twitter</a> og <a href="http://www.facebook.com/smidig">facebook</a> for oppdateringer.
+        .about-us
+          %h3 Hvorfor Smidigkonferensen?
 
-      = partial :twitter_widget
+          Vi tror at IT-prosjekter i Norge kan lære mye av prinsippene bak smidig
+          utvikling. Derfor arrangerer frivillige entusiaster Smidigkonferansen for
+          å dele erfaringer og bidra til å øke kunnskapen om smidige metoder i Oslo og Norge.
 
-      .about-us
-        %h3 Hvorfor Smidigkonferensen?
-
-        Vi tror at IT-prosjekter i Norge kan lære mye av prinsippene bak smidig
-        utvikling. Derfor arrangerer frivillige entusiaster Smidigkonferansen for
-        å dele erfaringer og bidra til å øke kunnskapen om smidige metoder i Oslo
-        og Norge.
-
-
-    %section.sponsors
-      %ul.sponsor-list
-        - for sponsor in sponsors do
-          %li.sponsor-list_item
-            %a.sponsor-list_link{:href => sponsor[:url]}
-              %img{:alt => sponsor[:name], :src => "/images/sponsors/#{sponsor[:img]}" }
-      Konferansen finansieres av deltakeravgift og sponsormidler fra firmaer som ønsker økt fokus på smidige metoder. Ta kontakt med <a href="mailto:kontakt@smidig.no">kontakt@smidig.no</a> dersom din bedrift er interessert i få vite mer om å sponse Smidig 2012.
+    .aside.fourcol.last
+      .borders
+        %ul.sponsors.clearfix
+          - for sponsor in sponsors do
+            %li
+              %a.sponsor-link{:href => sponsor[:url]}
+                %img{:alt => sponsor[:name], :src => "/images/sponsors/#{sponsor[:img]}" }
+        %p.info
+          Konferansen finansieres av deltakeravgift og sponsormidler fra firmaer som ønsker økt fokus på smidige metoder. Ta kontakt med <a href="mailto:kontakt@smidig.no">kontakt@smidig.no</a> dersom din bedrift er interessert i få vite mer om å sponse Smidig 2012.
 
 %footer.page-footer
   Smidigkonferanse 2012. 

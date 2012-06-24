@@ -39,11 +39,15 @@ before do
   end
 end
 
-
 get '/' do
   haml :index
 end
 
 get '/stylesheet' do
   sass :stylesheet
+end
+
+get '/*.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass params[:splat].join.to_sym
 end
