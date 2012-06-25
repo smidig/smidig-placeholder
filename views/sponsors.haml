@@ -1,0 +1,8 @@
+.borders
+  %ul.sponsors.clearfix
+    - for sponsor in sponsors do
+      %li
+        %a.sponsor-link{:href => sponsor[:url]}
+          %img{:alt => sponsor[:name], :src => @request.base_url + "/images/sponsors/#{sponsor[:img]}" }
+  %p.info
+    Konferansen finansieres av deltakeravgift og sponsormidler fra firmaer som ønsker økt fokus på smidige metoder. Ta kontakt med <a href="mailto:kontakt@smidig.no">kontakt@smidig.no</a> dersom din bedrift er interessert i få vite mer om å sponse Smidig 2012.

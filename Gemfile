@@ -4,6 +4,7 @@ gem "sinatra"
 gem "thin"
 gem "haml"
 gem "sass"
+gem "sinatra-jsonp"
 
 group :development do
   gem "rack"

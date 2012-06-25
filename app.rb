@@ -2,6 +2,7 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 require 'yaml'
+require 'sinatra/jsonp'
 
 
 configure do
@@ -41,6 +42,11 @@ end
 
 get '/' do
   haml :index
+end
+
+get '/sponsors' do
+  data = haml :sponsors, :layout => false
+  JSONP data
 end
 
 get '/stylesheet' do
