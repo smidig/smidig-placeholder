@@ -310,8 +310,9 @@
 
 	.page-nav li {
 		padding: 10px 15px;
-		border-left: 1px solid #ccc;
+		border: 1px solid #ccc;
 		float: left;
+		margin: 2px 5px;
 	}
 
 	.page-nav li.last {
