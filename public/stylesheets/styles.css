@@ -251,8 +251,7 @@
 	.event-title {
 		background: transparent url('/images/smidig_logo_60.png') no-repeat 0% 50%;
 		display: inline-block;
-		width: 250px;
-		padding: 20px 0 15px 75px;
+		padding: 15px 0 15px 75px;
 		margin-top: 15px;
 		float: left;
 	}
