@@ -239,6 +239,14 @@
 		background: linear-gradient(top, #ffffff 0%,#EFEFEF 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#EFEFEF',GradientType=0 ); /* IE6-9 */
 	}
+	
+	.page-footer {
+		border-top: 1px solid black;
+		background: gray;
+		padding: 10px;
+		color: whiteSmoke;
+		margin-top: 10px;
+	}
 
 	.event-title {
 		background: transparent url('/images/smidig_logo_60.png') no-repeat 0% 50%;
