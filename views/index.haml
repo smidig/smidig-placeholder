@@ -21,36 +21,86 @@
               5.-6. November, 2012
             .event-location
               Radisson Blu Plaza Hotel, Oslo
+            .event-participate
+              %a(href="participate.smidig2012.no")
+                Meld deg på!
 
   .row
     %nav.twelvecol.last
       %ul.page-nav
         %li.active
-          %a(href="#") Whatever
+          %a(href="#about") Om Smidig
         %li
-          %a(href="#") Whenever
+          %a(href="#why") Hvorfor
+        %li 
+          %a(href="#voluntary") Frivillig
         %li
-          %a(href="#") Whatever 123
+          %a(href="#contribute") Bidra
         %li.last
-          %a(href="#") Whatever
+          %a(href="#sponse") Sponse
 
 .page-content_wrapper.container
   .page-content.row.main
     .main-content.eightcol
       .content-wrapper
-        %h2.page_title Om Smidigkonferensen
+        %h2.page_title{:id => "about"} Om Smidigkonferensen
+        Smidigkonferansen er en årlig konferanse for og av fagmiljøet selv.
+        Her får du høre hvordan andre prosjektdeltakere som deg takler hverdagen
+        i sine smidige og kanskje ikke så smidige prosjekter. Her får du stiftet
+        nye bekjentskaper som er i samme situasjon som deg selv. Du får forsterket
+        de bekjentskapene du har, og lært hvor mye både fagmiljøet og du selv har å
+        by på. I fjor var ca 20% av deltakerne også foredragsholdere, noe som
+        skaper en unik atmosfære. Ikke bare får du høre interessante foredrag, men
+        det er lett å snakke med foredragsholderne gjennom hele konferansen.
 
-        Smidigkonferansen har blitt arrangert årlig siden 2007. Vi jobber nå med årets konsept og påmelding vi åpne snart.
-        Følg oss på <a href="https://twitter.com/smidig">twitter</a> og <a href="http://www.facebook.com/smidig">facebook</a> for oppdateringer.
+        .contentblock
+          %h3 Vårt unike format
+          Begge konferansedagene følger samme format: Lyntaler (korte, erfaringsbaserte foredrag) før lunsj og
+          diskusjonsgrupper (open space) etter lunsj. Hver lyntale er på ti minutter, så i løpet av formiddagen 
+          vil du få med deg intill 12 forskjellige lyntaler. I Open Space etter lunsj stemmer deltakerne selv frem hvilke 
+          temaer de ønsker å fordype seg i og jobber så med disse problemstillingene i mindre grupper. 
+          Enkle regler sikrer interaktivitet og faglig utbytte for deltakerne.
 
-        = partial :twitter_widget
-
-        .about-us
+        .about-us.contentblock{:id => "why"}
           %h3 Hvorfor Smidigkonferensen?
 
           Vi tror at IT-prosjekter i Norge kan lære mye av prinsippene bak smidig
-          utvikling. Derfor arrangerer frivillige entusiaster Smidigkonferansen for
-          å dele erfaringer og bidra til å øke kunnskapen om smidige metoder i Oslo og Norge.
+          utvikling. Derfor arrangerer vi Smidigkonferansen for å dele erfaringer og bidra 
+          til å øke kunnskapen om smidige metoder i Oslo og Norge.
+        
+        .news.contentblock
+          %h3 Nyheter fra smidigkonferansen
+          = partial :twitter_widget
+
+        .contentblock{:id => "voluntary"}
+          %h3 Har du lyst å bli med?
+          %p
+            Smidigkonferansen startet med noen fluktige tanker i hodene på noen, og har blitt gjort mulig av entusiaster som 
+            uoppfordret tilbød seg å gjennomføre alle de oppgavene som må til. Smidigkonferansen hadde ikke vært 
+            til hvis det ikke var for et fantastisk team av ildsjeler. 
+            %br 
+            %br
+            Dersom du vil vite mer om konferansen eller bidra, kan du finne mer info på 
+            %a(href="http://groups.google.com/group/smidig2012") vår interne mailingliste.
+
+        .contentblock{:id => "contribute"}
+          %h3 Bidra til Smidig 2012
+          Det finnes flere måter du kan bidra til det faglige innholdet på årets smidigkonferanse. 
+          %br
+          %br
+          %h4 Lyntaler
+          Lyntaler (”lightning talks” på engelsk) er tapas i foredragsholdernes verden: man får mange impulser fra mange forskjellige folk. På Smidig 2010 er tidsbegrensning til lyntaler ti minutter. Dette inspirerer foredragsholderne til å destillere budskapet sitt ned til det aller viktigste, og fjerne alle unødvendige deler. Dette er fordelaktig for deg som hører på.
+          %br
+          %br
+          %i Påmelding åpner snart!
+          %br
+          %br
+          %h4 Open space
+          I Open space, en type diskusjonsgruppe, dykker man dypere ned i de temaene deltakerne selv synes er mest interessante. Legenden sier at ideen til Open Space ble født av observasjonen om at på tradisjonelle konferanser er det ofte diskusjonene i kaffepausen som er mest givende. Tanken er å sette rammer som gjenskaper denne stemningen hvor man deler erfaringer og lærer av hverandre. Med inspirasjon fra lyntalene, eller med fokus på akkurat det problemet du sliter med i din organisasjon, har du en unik mulighet til å diskutere temaet nærmere med andre som har tilsvarende interesser og problemstillinger.
+        .contentblock{:id => "sponse"}
+          %h3 Vil din bedrift sponse smidig 2012?
+          %p
+            = partial :info_sponse
 
     .aside.fourcol.last
       .sponsor-container{:data => {:uri => "/sponsors"}}

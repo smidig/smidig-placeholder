@@ -44,6 +44,10 @@ get '/' do
   haml :index
 end
 
+get '/faq' do
+  haml :faq, :layout => true
+end
+
 get '/sponsors' do
   data = haml :sponsors, :layout => false
   JSONP data
