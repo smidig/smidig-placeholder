@@ -341,10 +341,8 @@
 	}
 
 	.aside .borders {
-		border-right: 1px solid #ccc;
-		border-left: 1px dotted #ccc;
+		border: 1px dotted #ccc;
 		height: 100%;
-		width: 100%;
 	}
 
 	.aside .sponsors {
