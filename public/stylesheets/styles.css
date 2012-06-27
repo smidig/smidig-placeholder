@@ -242,10 +242,30 @@
 	
 	.page-footer {
 		border-top: 1px solid black;
-		background: gray;
+		background: #555;
 		padding: 10px;
 		color: whiteSmoke;
 		margin-top: 10px;
+	}
+	.page-footer {
+		border-top: 1px solid black;
+		background: #555;
+		padding: 10px;
+		color: whiteSmoke;
+		margin-top: 10px;
+	}
+
+	.page-footer a, .page-footer h3 {
+		color: silver;
+		text-decoration: none;
+	}
+	.page-footer h3 {
+		margin: 10px 0;
+	}
+
+	.page-footer li {
+		list-style: circle inside;
+		margin: 3px 5px;
 	}
 
 	.event-title {
