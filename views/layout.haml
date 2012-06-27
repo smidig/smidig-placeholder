@@ -19,3 +19,26 @@
 
   %body
     =yield
+    %footer.page-footer
+      .row
+        Smidigkonferansen 2012 
+        %br
+        %a(href="mailto:kontakt@smidig.no") kontakt@smidig.no
+    
+        %h3 Godbiter fra tidligere konferanser
+        %ul
+          %li
+            %a(href="http://vimeo.com/smidig") Videoarkiv på Vimeo
+    
+          - 5.times do |i|
+            %li
+              %a{:href=>"http://smidig#{2011 - i}.no/"}= "Smidig #{2011 - i}"
+    
+        %h3 Følg oss
+        %ul
+          %li
+            %a(href="https://twitter.com/smidig") @twitter
+          %li
+            %a(href="http://www.facebook.com/smidig") Smidigkonferansen
+          %li
+            %a(href="http://lanyrd.com/2012/smidig2012") Lanyrd
