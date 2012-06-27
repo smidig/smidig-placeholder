@@ -14,6 +14,8 @@
     %script(charset="utf-8" src="/javascript/sponsor.js")
     :javascript
       smidig.sponsor.init("");
+      //Fix IE missing footer-tag
+      document.createElement('footer');
 
   %body
     =yield
