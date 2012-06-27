@@ -104,28 +104,3 @@
     .aside.fourcol.last
       .sponsor-container{:data => {:uri => "/sponsors"}}
         Laster..
-
-%footer.page-footer
-  .row
-    Smidigkonferanse 2012. 
-    <a href="mailto:kontakt@smidig.no">kontakt@smidig.no</a>
-
-    %h3 Godbiter fra tidligere konferanser
-    %ul
-      %li
-        %a(href="http://vimeo.com/smidig") Videoarkiv på Vimeo
-
-    %h3 Tidligere år
-    %ul
-      - 5.times do |i|
-        %li
-          %a{:href=>"http://smidig#{2011 - i}.no/"}= 2011 - i
-
-    %h3 Følg oss
-    %ul
-      %li
-        %a(href="https://twitter.com/smidig") @twitter
-      %li
-        %a(href="http://www.facebook.com/smidig") Smidigkonferansen
-      %li
-        %a(href="http://lanyrd.com/2012/smidig2012") Lanyrd
