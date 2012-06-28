@@ -18,19 +18,25 @@
 /* END TEMPORARY */
 
     body {
-    	font-family: Verdana, Arial;
+    	font-family: Georgia, Verdana, Arial;
     	xfont-size: 12px;
     	background: #EFEFEF;
+    	line-height: 1.4;
+    	color: #555;
     }
     
     h1, h2, h3, h4, h5 {
-		color: #555;
+		color: #000;
 		font-weight: normal;
-		margin-bottom: 5px;
+		margin-bottom: 3px;
     }
 
     a {
-    	color: #555;
+    	color: #000;
+    }
+
+    a:hover {
+    	color: red;
     }
 
     label,
@@ -264,8 +270,8 @@
 	}
 
 	.page-footer li {
-		list-style: circle inside;
-		margin: 3px 5px;
+		list-style: disc inside;
+		margin: 0px 5px;
 	}
 
 	.event-title {
@@ -312,8 +318,30 @@
 		border-bottom: 1px solid #be1e2d;
 	}
 
+	.event-tagline {
+		font-style: italic;
+	}
+
+	.event-details a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.event-participate {
+		text-align: center;
+		font-size: 1.1em;
+		margin-top: 4px; 
+		padding: 4px;
+		font-weight: bold;
+	}
+
+	.event-details:hover {
+		background: black;
+		opacity: 0.8;
+	}
+
 	.event-details .decoration {
-		padding: 15px 13px 13px 13px;
+		padding: 5px 5px;
 		-webkit-border-bottom-right-radius: 5px;
 		-webkit-border-bottom-left-radius: 5px;
 		-moz-border-radius-bottomright: 5px;
@@ -337,23 +365,28 @@
 
 	.page-nav li {
 		padding: 10px 15px;
-		border: 1px solid #ccc;
 		float: left;
 		margin: 2px 5px;
+		font-weight: bold;
+		background: #EFEEFE;
+		border: 2px solid #BBB;
 	}
 
 	.page-nav li:hover {
 		color: white;
-		background: #999;
-		border: 1px solid gray;
+		background: #444;
+		border: 2px solid #222;
+		border-bottom-color: red;
 	}
 
 	.page-nav li:hover a {
-		color: #000;
+		color: #FFF;
 	}
 
 	.page-nav li a {
 		text-decoration: none;
+		border-bottom: none;
+		color: #555;
 	}
 
 	.section {
@@ -595,6 +628,10 @@
 		padding-top: 15px;
     	margin-top: 20px;
     	border-top: 2px dotted #ccc;
+	}
+
+	.aside .borders {
+		border: none;
 	}
 
     .aside ul {
