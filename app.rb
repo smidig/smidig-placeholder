@@ -28,7 +28,7 @@ helpers do
   end
 
   def sponsors
-    YAML::load( File.open("sponsors.yml") )
+    YAML::load( File.open("sponsors.yml") ).shuffle
   end
 end
 
