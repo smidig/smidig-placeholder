@@ -9,7 +9,7 @@
   :img:  FINN_logoliten.gif
   :url:  http://www.finn.no/
 - :name: Bouvet
-  :img:  bouvet.gif
+  :img:  bouvet.png
   :url:  http://www.bouvet.no/
 - :name: Miles
   :img:  miles.gif
@@ -44,3 +44,6 @@
 - :name: WebStep
   :img:  webstep.png
   :url:  http://www.webstep.no/
+- :name: Comoyo
+  :img:  comoyo.png
+  :url:  http://www.comoyo.no/
