@@ -48,6 +48,10 @@ get '/faq' do
   haml :faq, :layout => true
 end
 
+get '/tema' do
+  haml :tema, :layout => true
+end
+
 get '/sponsors' do
   data = haml :sponsors, :layout => false
   JSONP data

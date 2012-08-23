@@ -3,6 +3,8 @@
   %head
     %meta(charset="utf-8")
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0"}
+    %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "/favicon.ico"}
+    %link{:rel => "shortcut icon", :href => "/favicon.gif"}
 
     %title Smidig 2012
 
@@ -20,28 +22,78 @@
     = partial :pagemap
     %meta{:itemprop =>"image", :content=>"http://smidig2012.no/images/smidig_logo_60.png"}
   %body
-    =yield
-    %footer.page-footer
-      .row
-        Smidigkonferansen 2012 
-        %br
-        %a(href="mailto:kontakt@smidig.no") kontakt@smidig.no
-    
-        %h3 Godbiter fra tidligere konferanser
-        %ul
+    %header.page-header.container
+    .row
+      .twelvecol.last
+        .event-title
+          %h1.event-name
+            Smidig 2012
+          %p.event-tagline
+            Den årlige konferansen for Smidig systemutvikling i Oslo.
+
+        .extra
+          .smidig-social
+            %a(href="http://www.facebook.com/smidig")
+              %img(src="/images/social/facebook-16x16.png")
+            %a(href="https://twitter.com/smidig")
+              %img(src="/images/social/twitter-16x16.png")
+            %a(href="http://lanyrd.com/2012/smidig2012")
+              %img(src="/images/social/lanyrd-16x16.png")
+          .event-details
+            %a(href="http://participate.smidig2012.no/")
+              .decoration
+                .event-date
+                  5.-6. November, 2012
+                .event-location
+                  Radisson Blu Plaza Hotel, Oslo
+                .event-participate
+                  Meld deg på!
+
+    .row
+      %nav.twelvecol.last
+        %ul.page-nav
+          %li.first
+            %a(href="/#about") Om Smidig
+          %li 
+            %a(href="/#voluntary") Frivillig
           %li
-            %a(href="http://vimeo.com/smidig") Videoarkiv på Vimeo
-    
-          - 5.times do |i|
-            %li
-              %a{:href=>"http://smidig#{2011 - i}.no/"}= "Smidig #{2011 - i}"
-    
-        %h3 Følg oss
-        %ul
+            %a(href="/#contribute") Bidra
           %li
-            %a(href="https://twitter.com/smidig") @twitter
+            %a(href="/#sponse") Sponse
+          %li.last
+            %a(href="http://participate.smidig2012.no/users/current") Min påmelding
+
+  .page-content_wrapper.container
+    .page-content.row.main
+      .main-content.eightcol
+        .content-wrapper
+        =yield
+      .aside.fourcol.last
+        .fb-like{:data => {:href=>"http://facebook.com/smidig",  :send=>"false", :width=>"350", :show_faces=>"true", :font=>"verdana"}}
+        .sponsor-container{:data => {:uri => "/sponsors"}}
+          Laster..
+  %footer.page-footer
+    .row
+      Smidigkonferansen 2012 
+      %br
+      %a(href="mailto:kontakt@smidig.no") kontakt@smidig.no
+  
+      %h3 Godbiter fra tidligere konferanser
+      %ul
+        %li
+          %a(href="http://vimeo.com/smidig") Videoarkiv på Vimeo
+  
+        - 5.times do |i|
           %li
-            %a(href="http://www.facebook.com/smidig") Smidigkonferansen
-          %li
-            %a(href="http://lanyrd.com/2012/smidig2012") Lanyrd
+            %a{:href=>"http://smidig#{2011 - i}.no/"}= "Smidig #{2011 - i}"
+  
+      %h3 Følg oss
+      %ul
+        %li
+          %a(href="https://twitter.com/smidig") @twitter
+        %li
+          %a(href="http://www.facebook.com/smidig") Smidigkonferansen
+        %li
+          %a(href="http://lanyrd.com/2012/smidig2012") Lanyrd
     = partial :analytics
+
