@@ -48,6 +48,10 @@ get '/faq' do
   haml :faq, :layout => true
 end
 
+get '/sponse' do
+  haml :sponse, :layout => true
+end
+
 get '/tema' do
   haml :tema, :layout => true
 end
