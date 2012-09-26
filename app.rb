@@ -56,6 +56,10 @@ get '/tema' do
   haml :tema, :layout => true
 end
 
+get '/policy' do
+  haml :policy, :layout => true
+end
+
 get '/sponsors' do
   data = haml :sponsors, :layout => false
   JSONP data
