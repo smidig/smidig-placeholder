@@ -60,6 +60,14 @@ get '/policy' do
   haml :policy, :layout => true
 end
 
+get '/keynote/risk_and_decision' do
+  haml :"keynote/risk_and_decision", :layout => true
+end
+
+get '/keynote/lean_startup' do
+  haml :"/keynote/lean_startup", :layout => true
+end
+
 get '/sponsors' do
   data = haml :sponsors, :layout => false
   JSONP data
