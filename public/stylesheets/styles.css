@@ -20,6 +20,13 @@
 		margin-right: 10px;
 	}
 
+	.twitter li {
+		margin-bottom: 10px;
+	}
+	.twitter .time {
+		font-weight: bold;
+	}
+
 /* END TEMPORARY */
 
     body {
