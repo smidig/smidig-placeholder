@@ -33,8 +33,6 @@ $(function() {
         limit = $(this).data("limit") || twitterConf.limit,
         reload = $(this).data("reload");
 
-    $(container).empty();
-
     function successHandler(data) {
       if(data.results) {
         data = data.results;
@@ -60,6 +58,8 @@ $(function() {
     }
 
     function execute() {
+        $(container).empty();
+
         $.ajax({ 
           url: url, 
           cache: true,       
