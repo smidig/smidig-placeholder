@@ -25,16 +25,23 @@ var twitterConf = {
 };
 
 $(function() {
-  $(".twitter").each(function() {
+  $(".twitter").each(function() {    
     var container = $(this),
         url = $(this).data("url"),
         show_user = $(this).data("showuser"),
-        show_time = $(this).data("showtime");
+        show_time = $(this).data("showtime"),
+        limit = $(this).data("limit") || twitterConf.limit,
+        reload = $(this).data("reload");
+
+    $(container).empty();
 
     function successHandler(data) {
-      $(container).empty();
+      if(data.results) {
+        data = data.results;
+      }
+
       $.each(data, function(idx, result) {
-        if(idx > twitterConf.limit) {
+        if(idx > limit) {
           return;
         }
         var text = twitterConf.parseUsername(twitterConf.parseHashtag(twitterConf.parseURL(result.text)));
@@ -48,17 +55,25 @@ $(function() {
     }
 
     function errorHandler() {
-        $(container).empty();
         var msg = $("<li>", {html: "Could not load tweets"});
         msg.appendTo(container);
     }
 
-    $.ajax({ 
-      url: url, 
-      cache: true,       
-      data: "include_entities=true",
-      dataType: "jsonp"
-    }).then(successHandler, errorHandler);
+    function execute() {
+        $.ajax({ 
+          url: url, 
+          cache: true,       
+          data: "include_entities=true",
+          dataType: "jsonp"
+        }).then(successHandler, errorHandler);
+    }
+
+    if(reload) {
+        execute();
+        setInterval(execute, (reload * 1000));
+    } else {
+        execute();
+    }
 
   });
 

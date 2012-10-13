@@ -68,6 +68,10 @@ get '/keynote/lean_startup' do
   haml :"/keynote/lean_startup", :layout => true
 end
 
+get '/open_space' do
+  haml :"open_space", :layout => true
+end
+
 get '/sponsors' do
   data = haml :sponsors, :layout => false
   JSONP data
