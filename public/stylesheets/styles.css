@@ -22,6 +22,7 @@
 
 	.twitter li {
 		margin-bottom: 10px;
+		list-style: none;
 	}
 	.twitter .time {
 		font-weight: bold;
