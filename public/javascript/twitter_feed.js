@@ -4,8 +4,7 @@
  */
 var twitterConf = {
     element: "<li>",
-    limit: 10,
-    url: "http://search.twitter.com/search.json",
+    limit: 5,
     parseURL: function(str) {
         return str.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(url) {
             return url.link(url);
@@ -28,13 +27,16 @@ var twitterConf = {
 $(function() {
   $(".twitter").each(function() {
     var container = $(this),
-        query = $(this).data("query"),
+        url = $(this).data("url"),
         show_user = $(this).data("showuser"),
         show_time = $(this).data("showtime");
 
     function successHandler(data) {
       $(container).empty();
-      $.each(data.results, function(idx, result) {
+      $.each(data, function(idx, result) {
+        if(idx > twitterConf.limit) {
+          return;
+        }
         var text = twitterConf.parseUsername(twitterConf.parseHashtag(twitterConf.parseURL(result.text)));
         var user = twitterConf.parseUsername("@"+result.from_user);
         var time = $.format.date(new Date(result.created_at), "dd/MM/yyyy");
@@ -50,11 +52,12 @@ $(function() {
         var msg = $("<li>", {html: "Could not load tweets"});
         msg.appendTo(container);
     }
-    
+
     $.ajax({ 
-      url: twitterConf.url, 
-      cache: true, 
-      data: "rpp=" + twitterConf.limit + "&q="+ query, dataType: "jsonp" 
+      url: url, 
+      cache: true,       
+      data: "include_entities=true",
+      dataType: "jsonp"
     }).then(successHandler, errorHandler);
 
   });
