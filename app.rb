@@ -81,6 +81,10 @@ get '/stylesheet' do
   sass :stylesheet
 end
 
+get '/profilering' do
+  haml :profilering, :layout => true
+end
+
 get '/*.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass params[:splat].join.to_sym
