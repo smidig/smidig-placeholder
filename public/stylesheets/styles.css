@@ -312,6 +312,10 @@
 		float: left;
 	}
 
+	.event-title a {
+		text-decoration: none;
+	}
+
 	.extra {
 		float: right;
 	}
