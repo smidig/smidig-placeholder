@@ -89,3 +89,9 @@ get '/*.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass params[:splat].join.to_sym
 end
+
+#Redirects...
+get '/program' do
+  redirect "http://participate.smidig2012.no/program"
+end
+
