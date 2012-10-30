@@ -94,4 +94,6 @@ end
 get '/program' do
   redirect "http://participate.smidig2012.no/program"
 end
-
+get '/program/workshop' do
+  redirect "http://participate.smidig2012.no/program/workshop"
+end
